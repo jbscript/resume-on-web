@@ -5,6 +5,7 @@ import {
   XLogo,
 } from "@phosphor-icons/react";
 import { Button } from "./components/ui/button";
+import { Badge } from "./components/ui/badge";
 
 function App() {
   return (
@@ -40,9 +41,17 @@ function App() {
                 specializing in full-stack development. I love creating
                 intuitive and efficient web applications.
               </div>
-              <div>
-                <Button>Download Resume</Button>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">React</Badge>
+                <Badge variant="secondary">Node.js</Badge>
+                <Badge variant="secondary">Tailwind</Badge>
+                <Badge variant="secondary">JavaScript</Badge>
+                <Badge variant="secondary">TypeScript</Badge>
+                <Badge variant="secondary">Git</Badge>
+                <Badge variant="secondary">Chrome Extension</Badge>
+                <Badge variant="secondary">MongoDB</Badge>
               </div>
+              <Button>Download Resume</Button>
             </div>
           </div>
           <div className="hidden lg:block">
