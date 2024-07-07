@@ -1,5 +1,6 @@
 import {
   GithubLogo,
+  Globe,
   InstagramLogo,
   LinkedinLogo,
   XLogo,
@@ -115,78 +116,225 @@ function App() {
             <TabsTrigger value="password">Work Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
           </TabsList>
-          <TabsContent value="projects">
+          <TabsContent value="projects" className="mt-6">
             <ul className="max-lg:space-y-4 lg:grid lg:grid-cols-2 lg:gap-8">
-              {Array.from({ length: 20 }, (_, i) => (
-                <li className="card bg-white duration-200 h-min col-span-1">
-                  <a
-                    className="cursor-pointer rounded-box duration-200 p-4 lg:p-6 group hover:bg-base-300 hover:scale-[1.02] space-y-0.5 lg:space-y-1"
-                    href="https://shipfa.st?ref=indiepage"
-                    target="_blank"
-                  >
-                    <div className="flex items-center gap-y-1 gap-x-2 lg:gap-x-3 flex-wrap">
-                      <img
-                        alt="ShipFast Logo"
-                        loading="lazy"
-                        width={20}
-                        height={20}
-                        decoding="async"
-                        data-nimg={1}
-                        className="w-5 h-5 lg:w-6 lg:h-6  duration-200 drop-shadow-sm object-cover group-hover:-rotate-12 delay-100 w-4 h-4 lg:w-5 lg:h-5"
-                        style={{ color: "transparent" }}
-                        src="https://marclou.com/_next/image?url=https%3A%2F%2Fd3m8mk7e1mf7xn.cloudfront.net%2F64224402d24ae443b84e744a%2F1693262630584logo_transparent.png&w=48&q=75"
-                      />
-                      <p className=" mr-auto  lg:text-base font-semibold">
-                        ShipFast
-                      </p>
-                      <div className="flex gap-2">
-                        <span
-                          className="badge badge-ghost badge-sm whitespace-nowrap duration-200 relative relative "
-                          data-tip="Last 30 days of revenue. Data is verified by Stripe and doesn't include payments that ShipFast may have collected via other means. Updated daily."
-                          currentitem="false"
-                        >
-                          <svg
-                            viewBox="0 0 29 29"
-                            className="w-4 h-4 absolute -left-2.5 top-1/2 -translate-y-1/2 rounded-l-rounded-badge "
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clipPath="url(#clip0_118_3)">
-                              <path
-                                d="M28.8698 0H-0.000286818L-0.000201464 6.48V22.39C-0.000201464 25.9688 0.000243902 28.87 0.000243902 28.87H28.8698V22.39V6.48V0Z"
-                                fill="#6772E5"
-                              />
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M13.2999 11.2001C13.2999 10.5101 13.8699 10.2001 14.7899 10.2001C16.3144 10.2331 17.8104 10.6199 19.1599 11.3301V7.24013C17.7715 6.69567 16.2911 6.42405 14.7999 6.44013C11.2399 6.44013 8.85986 8.30013 8.85986 11.4401C8.85986 16.3001 15.5399 15.5101 15.5399 17.6101C15.5399 18.4201 14.8299 18.6801 13.8599 18.6801C12.151 18.5859 10.4874 18.0964 8.99986 17.2501V21.4401C10.5156 22.0951 12.1486 22.4353 13.7999 22.4401C17.4499 22.4401 19.9699 20.6401 19.9699 17.4401C19.9999 12.2301 13.2999 13.1701 13.2999 11.2001Z"
-                                fill="white"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_118_3">
-                                <rect
-                                  width="28.87"
-                                  height="28.87"
-                                  fill="white"
-                                />
-                              </clipPath>
-                            </defs>
-                          </svg>
-                          <span className="opacity-0">.</span>
-                          <span>ss</span>
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-base-content/80 text-xs lg:text-sm">
-                      Ship your startup in days, not months
-                    </p>
-                  </a>
-                  <div className="w-full lg:p-2 h-24 lg:h-28">d</div>
-                </li>
+              {[
+                "https://cdn.llm.report/openai-demo.mp4",
+                "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+              ].map((i, key) => (
+                <ProjectCard
+                  dates="April 2023 - September 2023"
+                  link="https://shipfa.st?ref=indiepage"
+                  video={i}
+                  tags={["React", "Tailwind", "TypeScript"]}
+                  title="ShipFast"
+                  description="Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models."
+                  links={[
+                    {
+                      icon: <Globe size={16} />,
+                      type: "website",
+                      href: "dD",
+                    },
+                  ]}
+                />
               ))}
             </ul>
           </TabsContent>
-          <TabsContent value="education"></TabsContent>
+          <TabsContent value="password">
+            <ol className="relative border-s border-gray-200 dark:border-gray-700">
+              <li className="mb-10 ms-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <img
+                    className="rounded-full shadow-lg"
+                    src="/docs/images/people/profile-picture-3.jpg"
+                    alt="Bonnie image"
+                  />
+                </span>
+                <div className="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                    just now
+                  </time>
+                  <div className="text-sm font-normal text-gray-500 dark:text-gray-300">
+                    Bonnie moved{" "}
+                    <a
+                      href="#"
+                      className="font-semibold text-blue-600 dark:text-blue-500 hover:underline"
+                    >
+                      Jese Leos
+                    </a>{" "}
+                    to{" "}
+                    <span className="bg-gray-100 text-gray-800 text-xs font-normal me-2 px-2.5 py-0.5 rounded dark:bg-gray-600 dark:text-gray-300">
+                      Funny Group
+                    </span>
+                  </div>
+                </div>
+              </li>
+              <li className="mb-10 ms-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <img
+                    className="rounded-full shadow-lg"
+                    src="/docs/images/people/profile-picture-5.jpg"
+                    alt="Thomas Lean image"
+                  />
+                </span>
+                <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-700 dark:border-gray-600">
+                  <div className="items-center justify-between mb-3 sm:flex">
+                    <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                      2 hours ago
+                    </time>
+                    <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                      Thomas Lean commented on{" "}
+                      <a
+                        href="#"
+                        className="font-semibold text-gray-900 dark:text-white hover:underline"
+                      >
+                        Flowbite Pro
+                      </a>
+                    </div>
+                  </div>
+                  <div className="p-3 text-xs italic font-normal text-gray-500 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-600 dark:border-gray-500 dark:text-gray-300">
+                    Hi ya'll! I wanted to share a webinar zeroheight is having
+                    regarding how to best measure your design system! This is
+                    the second session of our new webinar series on
+                    #DesignSystems discussions where we'll be speaking about
+                    Measurement.
+                  </div>
+                </div>
+              </li>
+              <li className="ms-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                  <img
+                    className="rounded-full shadow-lg"
+                    src="/docs/images/people/profile-picture-1.jpg"
+                    alt="Jese Leos image"
+                  />
+                </span>
+                <div className="items-center justify-between p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:flex dark:bg-gray-700 dark:border-gray-600">
+                  <time className="mb-1 text-xs font-normal text-gray-400 sm:order-last sm:mb-0">
+                    1 day ago
+                  </time>
+                  <div className="text-sm font-normal text-gray-500 lex dark:text-gray-300">
+                    Jese Leos has changed{" "}
+                    <a
+                      href="#"
+                      className="font-semibold text-blue-600 dark:text-blue-500 hover:underline"
+                    >
+                      Pricing page
+                    </a>{" "}
+                    task status to{" "}
+                    <span className="font-semibold text-gray-900 dark:text-white">
+                      Finished
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </TabsContent>
+          <TabsContent value="education">
+            <>
+              <main className="relative min-h-screen flex flex-col justify-center bg-slate-50 overflow-hidden">
+                <div className="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
+                  <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
+                    <div className="w-full max-w-3xl mx-auto">
+                      {/* Vertical Timeline #1 */}
+                      <div className="-my-6">
+                        {/* Item #1 */}
+                        <div className="relative pl-8 sm:pl-32 py-6 group">
+                          {/* Purple label */}
+                          <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">
+                            The origin
+                          </div>
+                          {/* Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) */}
+                          <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+                              May, 2020
+                            </time>
+                            <div className="text-xl font-bold text-slate-900">
+                              Acme was founded in Milan, Italy
+                            </div>
+                          </div>
+                          {/* Content */}
+                          <div className="text-slate-500">
+                            Pretium lectus quam id leo. Urna et pharetra
+                            pharetra massa massa. Adipiscing enim eu neque
+                            aliquam vestibulum morbi blandit cursus risus.
+                          </div>
+                        </div>
+                        {/* Item #2 */}
+                        <div className="relative pl-8 sm:pl-32 py-6 group">
+                          {/* Purple label */}
+                          <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">
+                            The milestone
+                          </div>
+                          {/* Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) */}
+                          <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+                              May, 2021
+                            </time>
+                            <div className="text-xl font-bold text-slate-900">
+                              Reached 5K customers
+                            </div>
+                          </div>
+                          {/* Content */}
+                          <div className="text-slate-500">
+                            Pretium lectus quam id leo. Urna et pharetra
+                            pharetra massa massa. Adipiscing enim eu neque
+                            aliquam vestibulum morbi blandit cursus risus.
+                          </div>
+                        </div>
+                        {/* Item #3 */}
+                        <div className="relative pl-8 sm:pl-32 py-6 group">
+                          {/* Purple label */}
+                          <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">
+                            The acquisitions
+                          </div>
+                          {/* Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) */}
+                          <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+                              May, 2022
+                            </time>
+                            <div className="text-xl font-bold text-slate-900">
+                              Acquired various companies, inluding Technology
+                              Inc.
+                            </div>
+                          </div>
+                          {/* Content */}
+                          <div className="text-slate-500">
+                            Pretium lectus quam id leo. Urna et pharetra
+                            pharetra massa massa. Adipiscing enim eu neque
+                            aliquam vestibulum morbi blandit cursus risus.
+                          </div>
+                        </div>
+                        {/* Item #4 */}
+                        <div className="relative pl-8 sm:pl-32 py-6 group">
+                          {/* Purple label */}
+                          <div className="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">
+                            The IPO
+                          </div>
+                          {/* Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) */}
+                          <div className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
+                            <time className="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
+                              May, 2023
+                            </time>
+                            <div className="text-xl font-bold text-slate-900">
+                              Acme went public at the New York Stock Exchange
+                            </div>
+                          </div>
+                          {/* Content */}
+                          <div className="text-slate-500">
+                            Pretium lectus quam id leo. Urna et pharetra
+                            pharetra massa massa. Adipiscing enim eu neque
+                            aliquam vestibulum morbi blandit cursus risus.
+                          </div>
+                        </div>
+                      </div>
+                      {/* End: Vertical Timeline #1 */}
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </>
+          </TabsContent>
         </Tabs>
 
         {/* <section className="lg:h-screen lg:overflow-scroll noscrollbar w-full max-w-[1500px] ">
@@ -354,3 +502,111 @@ function App() {
 export default App;
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
+
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { cn } from "./lib/utils";
+
+interface Props {
+  title: string;
+  href?: string;
+  description: string;
+  dates: string;
+  tags: readonly string[];
+  link?: string;
+  image?: string;
+  video?: string;
+  links?: readonly {
+    icon: React.ReactNode;
+    type: string;
+    href: string;
+  }[];
+  className?: string;
+}
+
+export function ProjectCard({
+  title,
+  href,
+  description,
+  dates,
+  tags,
+  link,
+  image,
+  video,
+  links,
+  className,
+}: Props) {
+  return (
+    <Card
+      className={
+        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
+      }
+    >
+      <a href={href || "#"} className={cn("block cursor-pointer", className)}>
+        {video && (
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+          />
+        )}
+        {image && (
+          <img
+            src={image}
+            alt={title}
+            className="h-40 w-full overflow-hidden object-cover object-top"
+          />
+        )}
+      </a>
+      <CardHeader className="px-2">
+        <div className="space-y-1">
+          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <time className="font-sans text-xs">{dates}</time>
+          <div className="hidden font-sans text-xs underline print:visible">
+            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+          </div>
+          <div className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
+            {description}
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="mt-auto flex flex-col px-2">
+        {tags && tags.length > 0 && (
+          <div className="mt-2 flex flex-wrap gap-1">
+            {tags?.map((tag) => (
+              <Badge
+                className="px-1 py-0 text-[10px]"
+                variant="secondary"
+                key={tag}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+      </CardContent>
+      <CardFooter className="px-2 pb-2">
+        {links && links.length > 0 && (
+          <div className="flex flex-row flex-wrap items-start gap-1">
+            {links?.map((link, idx) => (
+              <a href={link?.href} key={idx} target="_blank">
+                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
+                  {link.icon}
+                  {link.type}
+                </Badge>
+              </a>
+            ))}
+          </div>
+        )}
+      </CardFooter>
+    </Card>
+  );
+}
