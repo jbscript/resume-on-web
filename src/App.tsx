@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { ProjectCard } from "./project-card";
 import { WorkExperience } from "./work-experience";
 import { Education } from "./education";
+import Profilepic from "./assets/profile.png";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
                 data-nimg={1}
                 className="w-20 h-20 lg:w-56 lg:h-56 rounded-full object-cover"
                 style={{ color: "transparent" }}
-                src="/profile.png"
+                src={Profilepic}
               />
               <div className="absolute inset-0 rounded-full shadow-[0_0_0px_1px_rgba(0,0,0,0.06)]" />
             </span>
